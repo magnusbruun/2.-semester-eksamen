@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Archivo', sans-serif;
+    box-sizing: border-box;
+    font-style: italic;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+:root {
+    --background: #f5f6f6;
+    --black: #242020;
+    --green: #d6de50;
+    }
+
+main {
+    background-color: var(--green);
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.top {
+    width: 100%;
+}
+
+.top img {
+    width: 100%;
+}
+
+
+.headline {
+    display: flex;
+    width: 60%;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-inline: AUTO
+    ;
+}
+
+.headline img {
+    width: 60px;
+    height: 60px;
+    margin: 0px 10px;
+}
+
+.lost-page-text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.lost-page-text h2 {
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    margin-inline: auto;
+    font-size: 20px;
+    line-height: 1.5;
+
+}
+
+.lost-page-text p {
+    font-size: 12px;
+    line-height: 1.5;
+    width: 80%;
+    margin-inline: auto;
+
+    
+}
+
+.btn {
+    width: 60%;
+    height: 50px;
+    background-color: #242020;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 50px;
+    margin-inline: auto;
+    text-decoration: none;
+}
+
+.btn p {
+    color: white;
+        font-family: 'Archivo', sans-serif;
+        font-weight: 100;
+        text-transform: uppercase;
+}
+
+.btn p span {
+    color: #d6de50;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 900;
+}
+
+@media screen and (min-width: 480px) {
+
+  .headline {
+    display: flex;
+    width: 80%;
+    font-size: 80px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    margin-inline: AUTO;
+    margin-top: -50px;
+}
+
+.headline img {
+    width: 90px;
+    height: 90px;
+    margin: 0px 10px;
+}
+
+}
+
+@media screen and (min-width: 770px) {
+
+  .headline {
+    display: flex;
+    width: 100%;
+    font-size: 100px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    margin-inline: AUTO;
+    margin-top: -100px;
+}
+
+.headline img {
+    width: 110px;
+    height: 110px;
+    margin: 0px 10px;
+}
+
+.btn {
+  width: 40%;
+  height: 50px;
+  background-color: #242020;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 50px;
+  margin-inline: auto;
+  text-decoration: none;
+}
+
+}
+

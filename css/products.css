@@ -1,0 +1,739 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Archivo', sans-serif;
+    box-sizing: border-box;
+    font-style: italic;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+:root {
+    --background: #f5f6f6;
+    --black: #242020;
+    --green: #d6de50;
+}
+
+main {
+    background-color: var(--background);
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+/*FORSIDE-MOBILE*/
+/*Header*/
+header {
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+
+#menu__toggle:checked+.menu__btn>span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked+.menu__btn>span::before {
+    top: 0;
+    transform: rotate(0deg);
+}
+
+#menu__toggle:checked+.menu__btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked~.menu__box {
+    left: 0 !important;
+}
+
+.menu__btn {
+    position: fixed;
+    top: 28px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--black);
+    transition-duration: .25s;
+}
+
+.menu__btn>span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn>span::after {
+    content: '';
+    top: 8px;
+}
+
+.menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    transition-duration: .25s;
+}
+
+.menu__item {
+    display: block;
+    padding: 24px 40px;
+    color: var(--black);
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition-duration: .25s;
+}
+
+.menu__item:hover {
+    background-color: var(--green);
+}
+
+.menu_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.menu_img img {
+    width: 200px;
+}
+
+.header_logo {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.header_logo img {
+    width: 150px;
+}
+
+/*Header slut*/
+
+/*OVERSKRIFT*/
+.filler {
+    height: 60px;
+}
+
+.overskrift-wrapper {
+    background: var(--background);
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overskrift {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.overskrift span {
+    color: var(--green);
+}
+
+.overskrift h1 {
+    color: var(--black);
+    font-size: 22px;
+    margin-top: 40px;
+}
+
+.overskrift p {
+    color: var(--black);
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/*OVERSKRIFT SLUT*/
+
+/*filter knapper*/
+.explore-sports {
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown {
+    width: 60%;
+    position: relative;
+    padding-top: 40px;
+}
+
+.dropdown button {
+    border: none;
+}
+
+.dropdown * {
+    box-sizing: border-box;
+}
+
+.select {
+    color: #f5f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    width: 100%;
+    height: 30px;
+}
+
+.sports {
+    color: #d6de50;
+    font-weight: 900;
+}
+
+
+
+.menu {
+    list-style: none;
+    padding: 5px 5px;
+    background: #f5f6f6;
+    position: absolute;
+    left: 50%;
+    width: 168px;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.2;
+    z-index: 1;
+    margin-top: 5px;
+}
+
+.fa-solid {
+    padding-left: 2px;
+}
+
+.menu button {
+    padding: 10px 2px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 900;
+    border: none;
+}
+
+.menu button:hover {
+    background: #d6de50;
+}
+
+.active {
+    background: #d6de50;
+    color: #f5f6f6;
+}
+
+.menu-open {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+}
+
+/*filter knapper*/
+
+/*PRODUKTBILLEDER*/
+.perler-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.filterDiv img {
+    width: 150px;
+}
+
+.filterDiv {
+    margin: 40px 10px;
+    max-width: 150px;
+}
+
+.filterDiv p {
+    color: #d6de50;
+}
+
+.filterDiv h3 {
+    padding-top: 5px;
+    font-size: 11px;
+    max-width: 100%;
+}
+
+.filterDiv h4 {
+    padding-top: 2px;
+    font-size: 14px;
+}
+
+#product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.cirkler {
+    display: flex;
+}
+
+.cirkler figure {
+    width: 20px;
+    height: 20px;
+    margin: 1px;
+    border-radius: 50%;
+}
+
+#cirkel-1 {
+    background-color: #d2b11e;
+}
+
+#cirkel-2 {
+    background-color: rgb(58, 147, 255);
+    margin-left: 2px;
+}
+
+#cirkel-bulls1 {
+    background-color: RGB(206, 17, 65);
+}
+
+#cirkel-bulls2 {
+    background-color: RGB(6, 25, 34);
+}
+
+#cirkel-4 {
+    background-color: #d6de50;
+}
+
+#cirkel-golden1 {
+    background-color: RGB(255, 199, 44);
+}
+
+#cirkel-golden2 {
+    background-color: RGB(29, 66, 138);
+}
+
+#cirkel-liverpool {
+    background-color: RGB(200, 16, 46);
+}
+
+#cirkel-pirates1 {
+    background-color: rgb(208, 1, 1);
+}
+
+#cirkel-pirates2 {
+    background-color: rgb(35, 35, 35);
+}
+
+#cirkel-rangers1 {
+    background-color: RGB(0,56,168);
+}
+#cirkel-rangers2 {
+    background-color: RGB(206,17,38);
+}
+
+#cirkel-celtics {
+    background-color: RGB(0, 122, 51);
+}
+
+#cirkel-spurs {
+    background-color: RGB(19, 34, 87);
+}
+
+#cirkel-chelsea {
+    background-color: RGB(3, 70, 148);
+}
+
+#cirkel-la1 {
+    background-color: purple;
+}
+
+#cirkel-la2 {
+    background-color: rgb(233, 218, 0);
+}
+/*PRODUKTBILLEDER SLUT*/
+
+/*OVERLAY PRODUKTBILLEDER*/
+/*
+#container {
+    position: relative;
+    width: 50%;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    max-width: 150px;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    width: 150px;
+    opacity: 0;
+    transition: .5s ease;
+  }
+  
+  #container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  */
+  /*OVERLAY PRODUKTBILLEDER SLUT*/
+
+/*PRODUKT-SLIDER*/
+.produkt-overskrift {
+    margin: 20px;
+}
+
+.frontpage-product {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-headline {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.product-headline p {
+    font-size: 24px;
+    color: var(--black);
+    font-family: 'Archivo', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+
+}
+
+.product-headline span {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: var(--green);
+    font-family: 'Archivo', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+
+}
+
+.product-slider {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.wrapper i {
+    top: 35%;
+    border: solid #24202062;
+    border-width: 0 8px 8px 0;
+    display: inline-block;
+    padding: 16px;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: none;
+    margin-left: 40px;
+    margin-right: 40px;
+    transition: transform 0.1s linear;
+}
+
+#right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-0deg);
+}
+
+#left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(0deg);
+}
+
+.wrapper i:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+.wrapper i:first-child {
+    left: -22px;
+}
+
+.wrapper i:last-child {
+    right: -22px;
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 4) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .card {
+    scroll-snap-align: start;
+    height: 300px;
+    list-style: none;
+    cursor: pointer;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    flex-direction: column;
+    box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.23);
+
+}
+
+.carousel .card .img {
+    height: 248px;
+    width: 100%;
+}
+
+.card .img img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+
+}
+
+.carousel .card h2 {
+  color: var(--black);
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin: 20px 0 10px;
+  width: 80%;
+}
+.carousel .card span {
+  color: var(--black);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 10px;
+  text-align: end;
+  width: 80%;
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+}
+
+/*PRODUKT-SLIDER SLUT*/
+
+/*PRODUKTFILTER*/
+.filterDiv {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.container {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+/* Style the buttons */
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+.btn.active {
+    background-color: var(--green);
+    color: var(--black);
+}
+
+#explore {
+    background: var(--black);
+    color: var(--background);
+}
+
+#explore span {
+    color: var(--green);
+    font-weight: 900;
+}
+
+footer{
+    width: 100%;
+    height: 350px;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+}
+
+.service{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    margin-top: 100px;
+    line-height: 25px;
+    margin-inline: auto;
+    color: var(--background);
+}
+
+.service span{
+    font-size: 20px;
+    line-height: 100px;
+}
+
+@media screen and (min-width: 480px) {
+
+    /*OVERSKRIFT*/
+    .overskrift h1 {
+        color: var(--black);
+        font-size: 30px;
+        margin-top: 40px;
+    }
+
+    .overskrift p {
+        color: var(--black);
+        font-size: 15px;
+        margin-top: 10px;
+        font-weight: 600;
+    }
+    /*OVERSKRIFT SLUT*/
+}
+
+@media screen and (min-width: 900px) {
+    /*OVERSKRIFT*/
+    .overskrift-wrapper {
+        background: var(--background);
+        min-height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .overskrift h1 {
+        color: var(--black);
+        font-size: 40px;
+        margin-top: 60px;
+    }
+
+    .overskrift p {
+        color: var(--black);
+        font-size: 20px;
+        margin-top: 10px;
+        font-weight: 600;
+    }
+    /*OVERSKRIFT SLUT*/
+
+    /*PRODUKTER*/
+    #product {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 70%;
+    }
+
+    .filterDiv img {
+        width: 200px;
+    }
+
+    .filterDiv {
+        margin: 40px 10px;
+        max-width: 200px;
+    }
+}
