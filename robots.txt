@@ -1,0 +1,6 @@
+# robots.org
+
+Sitemap: https://wwww.cb.torbendrejergaard.dk/Sitemap.xml
+
+User-agent: *
+Disallow

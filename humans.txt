@@ -1,0 +1,16 @@
+Eksamensprojekt 2023 - Mulitmediedesign 2. Semester
+Virksomhed - Spot A Fan
+
+Projektet er udarbejdet af Sabina Larsen, Torben Drejergaard, Emilie langhoff og Magnus Bruun
+
+Hele gruppen har gjort en stor indsats for at nå tidsfristen på projektet.
+Det er lykkedes os, at undersøge, designe og programmere et resultat vi alle er tilfredse med.
+
+Under processen er der gjort brug af diverse UX teknikker for at finde og ramme vores målgruppe.
+
+I design er har vi brugt Adobe Programmer til at lave skitser, mock-ups, logo, animationer og video/billeder.
+
+Til slut i programmeringen har vi gjort brug af HTML5, CSS3 og Javascript til hjemmesidens opsætning, design og funktionalitet.
+
+Gruppearbejdet er gået godt og vi har alle haft en god oplevelse med eksamensprojektet!
+
